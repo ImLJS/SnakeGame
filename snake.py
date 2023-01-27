@@ -37,9 +37,10 @@ class Snake:
         self.all_turtle[0].setheading(90)
 
     def down(self):
+        self.all_turtle[0].setheading(270)
+
+    def left(self):
         self.all_turtle[0].setheading(180)
 
-    # def left(self):
-    #     self.all_turtle[0].left(90)
-    # def right(self):
-    #     self.all_turtle[0].right(90)
+    def right(self):
+        self.all_turtle[0].setheading(0)
