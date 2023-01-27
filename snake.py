@@ -33,3 +33,13 @@ class Snake:
 
         self.all_turtle[0].forward(20)
 
+    def up(self):
+        if self.all_turtle[0].xcor() >= 0:
+            self.all_turtle[0].left(90)
+
+        else:
+            self.all_turtle[0].right(90)
+    # def down(self):
+    # def left(self):
+    #
+    # def right(self):
