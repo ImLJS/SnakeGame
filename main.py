@@ -23,6 +23,8 @@ if is_game_on:
 
 while game:
     snake.move()
+    if snake.head.distance(food) < 15:
+        print('nom')
     if snake.all_turtle[0].xcor() >= 245 or snake.all_turtle[0].xcor() <= -245:
         game = False
     if snake.all_turtle[0].ycor() >= 245 or snake.all_turtle[0].ycor() <= -245:
