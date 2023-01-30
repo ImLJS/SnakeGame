@@ -1,6 +1,7 @@
 from turtle import Screen
 from snake import Snake
 from food import Food
+from scoreboard import Score
 
 screen = Screen()
 snake = Snake()
@@ -11,7 +12,7 @@ screen.onkey(snake.left,'Left')
 screen.onkey(snake.right,'Right')
 
 food = Food()
-food.create_food()
+score = Score()
 
 is_game_on = False
 game = False
@@ -26,8 +27,12 @@ while game:
     snake.move()
     if snake.head.distance(food) < 15:
         food.create_food()
+        score.score += 1
+        score.update_score()
+
     if snake.all_turtle[0].xcor() >= 245 or snake.all_turtle[0].xcor() <= -245:
         game = False
+
     if snake.all_turtle[0].ycor() >= 245 or snake.all_turtle[0].ycor() <= -245:
         game = False
 
