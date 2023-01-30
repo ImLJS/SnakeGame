@@ -10,6 +10,8 @@ class Food(Turtle):
         self.shapesize(0.5,0.5)
         self.pu()
         self.speed('fastest')
+
+    def create_food(self):
         random_x = random.randint(-230, 230)
         random_y = random.randint(-230, 230)
         self.goto(random_x, random_y)

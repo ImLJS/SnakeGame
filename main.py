@@ -11,6 +11,7 @@ screen.onkey(snake.left,'Left')
 screen.onkey(snake.right,'Right')
 
 food = Food()
+food.create_food()
 
 is_game_on = False
 game = False
@@ -24,7 +25,7 @@ if is_game_on:
 while game:
     snake.move()
     if snake.head.distance(food) < 15:
-        print('nom')
+        food.create_food()
     if snake.all_turtle[0].xcor() >= 245 or snake.all_turtle[0].xcor() <= -245:
         game = False
     if snake.all_turtle[0].ycor() >= 245 or snake.all_turtle[0].ycor() <= -245:
