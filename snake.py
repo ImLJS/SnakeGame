@@ -1,6 +1,11 @@
 from turtle import Turtle, Screen
 import time
 
+UP = 90
+DOWN = 270
+LEFT = 180
+RIGHT = 0
+
 screen = Screen()
 screen.setup(width=500, height=500)
 screen.bgcolor('black')
@@ -12,6 +17,7 @@ class Snake:
     def __init__(self):
         self.x_position = 0
         self.all_turtle = []
+        self.head = self.all_turtle[0]
         self.create_snake()
 
     def create_snake(self):
@@ -31,16 +37,20 @@ class Snake:
             new_y = self.all_turtle[turtle - 1].ycor()
             self.all_turtle[turtle].goto(new_x, new_y)
 
-        self.all_turtle[0].forward(20)
+        self.head.forward(20)
 
     def up(self):
-        self.all_turtle[0].setheading(90)
+        if self.head.heading() != DOWN:
+            self.head.setheading(UP)
 
     def down(self):
-        self.all_turtle[0].setheading(270)
+        if self.head.heading() != UP:
+            self.head.setheading(DOWN)
 
     def left(self):
-        self.all_turtle[0].setheading(180)
+        if self.head.heading() != RIGHT:
+            self.head.setheading(LEFT)
 
     def right(self):
-        self.all_turtle[0].setheading(0)
+        if self.head.heading() != LEFT:
+            self.head.setheading(RIGHT)
