@@ -30,10 +30,10 @@ while game:
         score.score += 1
         score.update_score()
 
-    if snake.all_turtle[0].xcor() >= 245 or snake.all_turtle[0].xcor() <= -245:
+    if snake.all_turtle[0].xcor() >= 245 or snake.all_turtle[0].ycor() >= 245 or snake.all_turtle[0].xcor() <= -245 or \
+            snake.all_turtle[0].ycor() <= -245:
         game = False
+        score.game_over()
 
-    if snake.all_turtle[0].ycor() >= 245 or snake.all_turtle[0].ycor() <= -245:
-        game = False
 
 screen.exitonclick()
