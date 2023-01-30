@@ -1,5 +1,6 @@
 from turtle import Screen
 from snake import Snake
+from food import Food
 
 screen = Screen()
 snake = Snake()
@@ -8,6 +9,8 @@ screen.onkey(snake.up,'Up')
 screen.onkey(snake.down,'Down')
 screen.onkey(snake.left,'Left')
 screen.onkey(snake.right,'Right')
+
+food = Food()
 
 is_game_on = False
 game = False

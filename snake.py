@@ -17,8 +17,8 @@ class Snake:
     def __init__(self):
         self.x_position = 0
         self.all_turtle = []
-        self.head = self.all_turtle[0]
         self.create_snake()
+        self.head = self.all_turtle[0]
 
     def create_snake(self):
         for turtle in range(3):
