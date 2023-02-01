@@ -11,6 +11,7 @@ screen.bgcolor("black")
 screen.title("My Snake Game")
 screen.tracer(0)
 
+#Class Declaration
 snake = Snake()
 food = Food()
 scoreboard = Scoreboard()
