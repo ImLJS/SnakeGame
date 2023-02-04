@@ -26,6 +26,7 @@ class Snake:
         new_segment.goto(position)
         self.segments.append(new_segment)
 
+    # SNake Body Extend
     def extend(self):
         self.add_segment(self.segments[-1].position())
 
