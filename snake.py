@@ -39,7 +39,7 @@ class Snake:
             self.segments[seg_num].goto(new_x, new_y)
         self.head.forward(MOVE_DISTANCE)
 
-    # Snake Movement Logic
+    # Snake Movement Direction Logic
     def up(self):
         if self.head.heading() != DOWN:
             self.head.setheading(UP)
